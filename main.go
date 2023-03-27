@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"io"
 	"log"
@@ -9,6 +8,9 @@ import (
 	"os/exec"
 )
 
+//Flusher wraps writer adding Flush.
+//It was used before io.Pipe(), its here just for learning purpose.
+/*
 type Flusher struct {
 	w *bufio.Writer
 }
@@ -29,7 +31,7 @@ func (f *Flusher) Write(b []byte) (int, error) {
 	}
 	return count, err
 }
-
+*/
 func handle(conn net.Conn) {
 
 	/*
